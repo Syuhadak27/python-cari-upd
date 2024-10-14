@@ -1,4 +1,3 @@
-# utils.py
 import os
 import sys
 from telebot import TeleBot
@@ -12,5 +11,5 @@ def restart(bot: TeleBot, message) -> None:
     with open(".restartmsg", "w") as f:
         f.write(f"{chat_id}\n{message_id}\n")
 
-    # Restart server by running main.py
-    os.execl(sys.executable, sys.executable, "main.py")
+    # Restart server by first running update.py then main.py
+    os.execl(sys.executable, sys.executable, "-c", "import os; os.system('python update.py'); os.execl(sys.executable, sys.executable, 'main.py')")
