@@ -1,7 +1,7 @@
 from os import path
 from subprocess import run as srun
 
-UPSTREAM_REPO = "https://github.com/Syuhadak27/python-cari-link"
+UPSTREAM_REPO = "https://github.com/Syuhadak27/python-cari-upd"
 UPSTREAM_BRANCH = "update"
 
 # Clone atau reset repo dari GitHub
